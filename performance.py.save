@@ -1,0 +1,12 @@
+import psutil
+import time
+import subprocess
+import sys
+import pynvml
+
+def monitor_resources():
+	cpu_freq = psutil.cpu_freq()
+	cpu_usage = psutil.cpu_percent(interval = 1)
+	memory_info = psutil.virtual_memory()
+
+#	print(f"
